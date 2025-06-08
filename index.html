@@ -1,66 +1,142 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel Campbell Ryan Portfolio</title>
-  <link rel="icon" href="images/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samuel Campbell | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="bg-dark text-light text-center py-5">
-    <img src="assets/profilepic.png" alt="Profile Picture" class="profile-pic mb-3">
-    <h1>Samuel Campbell Ryan</h1>
-    <p>Developer | Creative Thinker | Problem Solver</p>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-10 text-center">
+    <img src="assets/profilepic.png" alt="Profile Picture" class="mx-auto w-36 h-36 rounded-full border-4 border-white mb-4 object-cover" />
+    <h1 class="text-4xl font-bold">Samuel Campbell</h1>
+    <p class="mt-2 text-lg max-w-3xl mx-auto">
+      AI Consultant/Prompt Engineer | UX/HCI/UI Design Expert, Consultant | Former Web Developer | Operations & Logistics Management |
+    </p>
+    <p class="mt-2 text-lg max-w-3xl mx-auto">
+      Data Driven, Creative, Innovative Leader. Adaptable and Goal-Oriented
+    </p>
+    <a href="assets/resume-samuel-campbell.pdf" download
+       class="inline-block mt-5 px-6 py-3 bg-green-500 hover:bg-green-600 transition rounded text-white font-semibold shadow-lg">
+      📄 Download Resume (PDF)
+    </a>
   </header>
 
-  <main class="container py-5">
-    <section id="cpp-projects">
-      <h2 class="mb-4">C++ Projects</h2>
-      <a href="assets/file-c++-projects.zip" class="btn btn-primary mb-4">
-        <i class="bi bi-download"></i> Download All C++ Projects
-      </a>
+  <!-- Navigation -->
+  <nav class="bg-blue-900 text-white py-3 text-center sticky top-0 z-10">
+    <a href="#projects" class="mx-3 hover:underline">Projects</a>
+    <a href="#amazon" class="mx-3 hover:underline">Amazon Internship</a>
+    <a href="#accomplishments" class="mx-3 hover:underline">Accomplishments</a>
+    <a href="#contact" class="mx-3 hover:underline">Contact</a>
+  </nav>
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/previews/project1.png" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Algorithm Visualizer</h5>
-              <p class="card-text">A C++ tool for visualizing sorting and searching algorithms.</p>
-              <button class="btn btn-outline-secondary" onclick="showPreview('project1')">Preview</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
 
-      <div id="preview-modal" class="modal">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Project Preview</h5>
-              <button class="btn-close" onclick="hidePreview()"></button>
-            </div>
-            <div class="modal-body" id="preview-content"></div>
-          </div>
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="text-3xl font-bold text-blue-800 mb-6">Projects</h2>
+      <div class="space-y-6">
+
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-2xl font-semibold mb-2">Amazon.com Ops Management Internship: Project Results Report</h3>
+          <p class="mb-2">
+            Amazon "whiteboard" paper that I successfully presented to leadership at the end of my internship.
+            I was offered another consecutive internship at a different facility as a result of my success.
+            <a href="assets/amazon-whitepaper-report.pdf" target="_blank" class="text-blue-600 underline">Final Project Report PDF</a>
+          </p>
         </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-2xl font-semibold mb-2">Misc. C++ Programs</h3>
+          <p>Managed hundreds of claims and improved response time by 30% through workflow automation.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-2xl font-semibold mb-2">Sample Content Creation and Brand Building</h3>
+          <p>
+            Produced via my AI prompting expertise combined with UI/UX Design and Web Development knowledge.
+            I consult, educate, and develop digital solutions leveraging AI and human-computer interaction principles.
+          </p>
+        </div>
+
       </div>
     </section>
+
+    <!-- Amazon Internship -->
+    <section id="amazon">
+      <h2 class="text-3xl font-bold text-blue-800 mb-6">Amazon Internship Results</h2>
+      <div class="space-y-8">
+
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-xl font-semibold">Summer 2023 – Waldorf, MD</h3>
+          <ul class="list-disc list-inside mt-3 space-y-1 text-gray-800">
+            <li>Led daily operations & KPI reporting</li>
+            <li>Implemented workflows saving <strong>$340,000 annually</strong></li>
+            <li>Applied Amazon Leadership Principles to improve team performance</li>
+            <li>Supervised 50+ people at any given time, managed 5-10 direct reports</li>
+            <li>Fine-tuned logistics management protocols and procedures to cut costs and improve rates</li>
+            <li>Ensured measurable results and cost-driven data</li>
+            <li>Harnessed AI tools to assist and maximize my time and effort</li>
+          </ul>
+          <a href="assets/uva-transcript-february2025.pdf" target="_blank" class="text-blue-600 underline mt-3 inline-block">📘 View Final Report</a>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-xl font-semibold">Summer 2022 – Prince George, VA</h3>
+          <ul class="list-disc list-inside mt-3 space-y-1 text-gray-800">
+            <li>Managed 30+ associates daily</li>
+            <li>Improved process proficiency by 25%</li>
+            <li>Focused on safety and customer obsession initiatives</li>
+            <li>Streamlined measurable performance factors, cutting costs</li>
+            <li>Became well versed in logistics and Amazon supply chain info</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Accomplishments -->
+    <section id="accomplishments">
+      <h2 class="text-3xl font-bold text-blue-800 mb-6">Accomplishments, Certificates, & Licenses</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-800 max-w-3xl">
+        <li>University of Virginia Alumni - Class of 2025</li>
+        <li class="font-bold text-red-600">LOOKING FOR WORK! Especially as AI Prompt Engineer/Consultant, UI/UX Design Expert, Branding/Marketing/Content Strategist and Implementor</li>
+        <li>Two-time Summer Amazon Operations Intern</li>
+        <li>Former Web Developer for the University of Virginia</li>
+        <li>Former UI/UX Design Consultant for the University of Virginia</li>
+        <li>Former Teaching Assistant for CS 3205 - Human-Computer Interaction (UI/UX/HCI Design Class)</li>
+        <li>Certified Personal Trainer, Actively Training for 7+ years</li>
+        <li>Certified CPR/AED/First-Aid</li>
+        <li>Certified NAUI Open Water Scuba Diver</li>
+        <li>4.00 GPA at BRCC; earned Associates Degree before transferring to UVA</li>
+        <li>Summa cum laude recognition, President’s List, top of class at BRCC</li>
+        <li>PTK All-State Academic Scholarship Nomination</li>
+        <li>Proud Sheepadoodle Dog Dad</li>
+        <li>Proud UVA Alumni</li>
+        <li><a href="assets/brcc-transcript.pdf" target="_blank" class="text-blue-600 underline">🎓 View Blue Ridge Community College Transcript</a></li>
+        <li><a href="assets/uva-transcript.pdf" target="_blank" class="text-blue-600 underline">📑 View University of Virginia Transcript</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="text-3xl font-bold text-blue-800 mb-6">Contact</h2>
+      <p>Email: <a href="mailto:campbellsamuelryan@gmail.com" class="text-blue-600 underline">campbellsamuelryan@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/samuelcampbell" class="text-blue-600 underline">linkedin.com/in/samuelcampbell</a></p>
+      <p>GitHub: <a href="https://github.com/samuelryancampbell" class="text-blue-600 underline">github.com/samuelryancampbell</a></p>
+      <p>Cell: <a href="tel:4343262614" class="text-blue-600 underline">434-326-2614</a></p>
+    </section>
+
   </main>
 
-  <footer class="bg-dark text-light py-4">
-    <div class="container d-flex justify-content-between">
-      <span>© 2025 Samuel Campbell Ryan</span>
-      <div>
-        <a href="mailto:your@email.com"><i class="bi bi-envelope-fill"></i></a>
-        <a href="https://github.com/campbellsamuelryan"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com/in/YOUR-LINKEDIN"><i class="bi bi-linkedin"></i></a>
-      </div>
-    </div>
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-600 bg-gray-200">
+    &copy; 2025 Samuel Campbell. All rights reserved.
   </footer>
-  <script src="script.js"></script>
+
 </body>
 </html>
+
