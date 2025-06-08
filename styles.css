@@ -1,194 +1,187 @@
-/* General Reset */
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Body Styling */
 body {
-  background-color: #f3f4f6;
-  color: #333;
+  background-color: #f8fafc;
+  color: #1f2937;
   line-height: 1.6;
-  padding-top: 60px; /* Adjusted for fixed navbar */
+  padding-top: 80px;
 }
 
-/* Header Styling */
+/* Header */
 header {
-  background-color: #1e3a8a; /* Deep blue */
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
   color: white;
   text-align: center;
-  padding: 40px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  padding: 60px 20px 40px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 header a {
-  background-color: #10b981; /* Green */
+  background-color: #10b981;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header a:hover {
-  background-color: #059669; /* Darker green */
+  background-color: #059669;
+  transform: scale(1.05);
 }
 
-/* Navigation Bar */
+/* Profile Picture */
+img.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
 nav {
-  background-color: #1e40af; /* Slightly darker blue */
-  position: fixed;
-  top: 80px; /* Below header */
-  width: 100%;
+  background-color: #1e40af;
+  position: sticky;
+  top: 0;
   z-index: 999;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
   color: white;
-  padding: 14px 20px;
-  display: inline-block;
+  margin: 0 15px;
+  font-weight: 600;
   text-decoration: none;
-  text-align: center;
-  width: 25%;
-  box-sizing: border-box;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  background-color: #3b82f6; /* Light blue */
+  color: #93c5fd;
 }
 
-nav a.active {
-  background-color: #9333ea; /* Purple */
+/* Looking for Work Banner */
+.work-banner {
+  background: linear-gradient(to right, #f43f5e, #ef4444);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Main Content */
+/* Sections */
 main {
-  margin-top: 160px; /* Adjusted for fixed header and navbar */
-  padding: 20px;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  padding: 40px 20px;
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 section h2 {
   font-size: 2rem;
   color: #1e3a8a;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
 section h3 {
-  font-size: 1.5rem;
-  color: #1e3a8a;
+  font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 10px;
+  color: #1e40af;
 }
 
-section ul {
-  list-style-type: disc;
+section p,
+section li {
+  font-size: 1rem;
+  color: #374151;
+}
+
+ul {
   padding-left: 20px;
 }
 
-section li {
+li {
   margin-bottom: 10px;
 }
 
-/* Profile Picture Styling */
-.profile-pic-wrapper {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 4px solid #007bff; /* Blue border */
+/* Project Cards */
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
 }
 
-.profile-pic {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.project-card:hover {
+  transform: translateY(-4px);
 }
 
-/* Modal Styling */
+/* Modal */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1050;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
   background: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   max-width: 90%;
-  max-height: 80%;
-  overflow: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 90%;
+  overflow-y: auto;
 }
 
-.modal img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
-  background-color: #e5e7eb; /* Light gray */
+  background-color: #f3f4f6;
+  padding: 30px;
   text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  color: #6b7280; /* Gray */
   font-size: 0.875rem;
-}
-
-footer a {
-  color: #ccc;
-  margin-left: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  color: #333;
+  color: #6b7280;
 }
 
 /* Responsive Design */
@@ -197,30 +190,24 @@ footer a:hover {
     font-size: 2rem;
   }
 
-  header p,
-  header a {
+  header p {
     font-size: 1rem;
   }
 
   nav a {
-    width: 100%;
-    padding: 12px;
+    display: block;
+    margin: 8px 0;
   }
 
   main {
-    padding: 10px;
+    padding: 20px;
   }
 
-  section h2 {
-    font-size: 1.5rem;
+  .project-card {
+    padding: 16px;
   }
 
-  section h3 {
-    font-size: 1.25rem;
-  }
-
-  .profile-pic-wrapper {
-    width: 120px;
-    height: 120px;
+  .work-banner {
+    font-size: 1rem;
   }
 }
