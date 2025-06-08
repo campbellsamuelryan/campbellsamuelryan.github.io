@@ -66,7 +66,54 @@
       cursor: pointer;
       z-index: 9999;
     }
-  </style>
+    .animated-banner {
+    background: linear-gradient(to right, #3b82f6, #9333ea);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 1000px;
+    border-radius: 12px;
+    animation: slideIn 1.2s ease-out;
+    position: relative;
+  }
+
+  .animated-banner .highlight {
+    font-size: 1.4rem;
+    color: #facc15;
+  }
+
+  .animated-banner .cta-button {
+    display: inline-block;
+    margin-top: 0.75rem;
+    background-color: #10b981;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .animated-banner .cta-button:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
   <script>
     function showPreview(id) {
       const previews = {
@@ -99,9 +146,10 @@
   </header>
 
   <!-- Work Banner -->
-  <div class="work-banner">
-    🚀 LOOKING FOR WORK! AI Prompt Engineer, UI/UX Expert, or Content Strategist Roles
-  </div>
+  <div class="work-banner animated-banner">
+  🚀 <span class="highlight">AVAILABLE FOR WORK</span> — AI Consulting, Prompt Engineering, Data Strategy, UI/UX Design, Branding, Marketing, Content Generation & Site Maintenance
+  <a href="#contact" class="cta-button">Contact Me</a>
+</div>
 
   <!-- Navigation -->
   <nav>
