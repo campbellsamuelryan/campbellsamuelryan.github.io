@@ -1,4 +1,3 @@
-/* General Reset */
 *,
 *::before,
 *::after {
@@ -13,8 +12,14 @@ body {
   background-color: #f9fafb;
   color: #1f2937;
   line-height: 1.75;
-  padding-top: 60px;
   font-size: 16px;
+  padding-top: 60px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #0f172a;
+  color: #e2e8f0;
 }
 
 /* Header Styling */
@@ -73,9 +78,7 @@ nav {
 nav a {
   color: white;
   padding: 14px 30px;
-  display: inline-block;
   text-decoration: none;
-  text-align: center;
   font-weight: 600;
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -145,7 +148,110 @@ section li {
   object-fit: cover;
 }
 
-/* Modal Styling */
+/* Projects */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 360px;
+  flex: 1;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #1e3a8a;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+body.dark-mode .card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark-mode .card h3 {
+  color: #93c5fd;
+}
+
+/* Button */
+.button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Work Banner */
+.animated-banner {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  animation: slideIn 1.2s ease-out;
+  position: sticky;
+  top: 80px;
+  z-index: 998;
+}
+
+.animated-banner .highlight {
+  font-size: 1.4rem;
+  color: #facc15;
+}
+
+.animated-banner .cta-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background-color: #10b981;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.animated-banner .cta-button:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -175,7 +281,7 @@ section li {
   border-radius: 10px;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
   background-color: #f1f5f9;
   text-align: center;
@@ -206,6 +312,20 @@ footer a:hover {
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   margin-top: 20px;
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
 }
 
 /* Responsive Design */
