@@ -1,73 +1,367 @@
-/* Add to the end of your CSS or merge with existing styles */
-
-/* Contact Links Modern Styling */
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center;
-  margin-top: 1.5rem;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
-  padding: 0.9em 1.8em;
-  border-radius: 32px;
-  background: linear-gradient(90deg, #007cf0 0%, #00dfd8 100%);
+/* Body Styling */
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.75;
+  font-size: 16px;
+  padding-top: 60px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
   color: white;
-  font-size: 1.09em;
+  text-align: center;
+  padding: 60px 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+header a {
+  background-color: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.09);
-  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
-  border: none;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
-.contact-link i {
-  font-size: 1.28em;
+header a:hover {
+  background-color: #059669;
+  transform: scale(1.05);
 }
 
-.contact-link:hover,
-.contact-link:focus {
-  transform: scale(1.09);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.13);
-  background: linear-gradient(90deg, #00b4d8 0%, #007cf0 100%);
-  outline: none;
+/* Navigation Bar */
+nav {
+  background-color: #1e40af;
+  position: fixed;
+  top: 130px;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .contact-links {
-    flex-direction: column;
-    gap: 0.7em;
-  }
-  .contact-link {
-    justify-content: center;
-    width: 100%;
-    font-size: 1.05em;
-  }
+nav a {
+  color: white;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Animated Typing Banner */
-.typing-banner {
-  display: inline-block;
-  font-size: 1.2rem;
-  letter-spacing: 0.01em;
-  min-height: 2.2em;
+nav a:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
 }
-#typing-banner {
-  color: #fffbe9;
+
+nav a.active {
+  background-color: #9333ea;
+}
+
+/* Main Content */
+main {
+  margin-top: 220px;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 2.25rem;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  color: #1e40af;
+  margin-bottom: 12px;
   font-weight: 600;
 }
-#typing-cursor {
+
+section ul {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+
+section li {
+  margin-bottom: 10px;
+}
+
+/* Profile Picture Styling */
+.profile-pic-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #2563eb;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Projects */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 360px;
+  flex: 1;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #1e3a8a;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+body.dark-mode .card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark-mode .card h3 {
+  color: #93c5fd;
+}
+
+/* Button */
+.button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Work Banner */
+.animated-banner {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  animation: slideIn 1.2s ease-out;
+  position: sticky;
+  top: 80px;
+  z-index: 998;
+}
+
+.animated-banner .highlight {
+  font-size: 1.4rem;
   color: #facc15;
-  animation: blink-cursor 1.1s steps(1) infinite;
-}
-@keyframes blink-cursor {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.1; }
 }
 
+.animated-banner .cta-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background-color: #10b981;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
 
+.animated-banner .cta-button:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1050;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 95%;
+  max-height: 85%;
+  overflow: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #f1f5f9;
+  text-align: center;
+  padding: 24px;
+  margin-top: 60px;
+}
+
+footer p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #3b82f6;
+  margin-left: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #1e3a8a;
+}
+
+/* Dog Section */
+#dog img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p,
+  header a {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 12px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  section h2 {
+    font-size: 1.75rem;
+  }
+
+  section h3 {
+    font-size: 1.25rem;
+  }
+
+  .profile-pic-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+}
